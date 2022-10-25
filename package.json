@@ -1,0 +1,19 @@
+{
+  "name": "candy-machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mint.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flingjie/candy-machine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flingjie/candy-machine/issues"
+  },
+  "homepage": "https://github.com/flingjie/candy-machine#readme"
+}
