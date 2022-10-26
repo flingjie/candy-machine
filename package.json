@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/flingjie/candy-machine/issues"
   },
-  "homepage": "https://github.com/flingjie/candy-machine#readme"
+  "homepage": "https://github.com/flingjie/candy-machine#readme",
+  "dependencies": {
+    "ipfs-http-client": "^59.0.0"
+  }
 }
