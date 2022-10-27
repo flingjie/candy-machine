@@ -6,7 +6,7 @@ const client = create('http://127.0.0.1:5001')
 
 async function upload (f) {
   console.log('upload===>', f)
-  let content = readFileSync(f, 'utf8');
+  let content = fs.readFileSync(f, 'utf8');
   const added = await client.add(content)
   console.log(added)
   return `https://ipfs.io/ipfs/${added.path}`
