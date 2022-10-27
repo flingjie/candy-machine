@@ -2,18 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { create } from 'ipfs-http-client';
 
-const projectId = process.env.PROJECT_ID
-const projectSecret = process.env.PROJECT_SECRET
-const auth =
-  'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-const client = create({
-  host: 'ipfs.infura.io',
-  port: 5001,
-  protocol: 'https',
-  headers: {
-    authorization: auth,
-  },
-})
+const client = create('http://127.0.0.1:5001')
 
 async function upload (f) {
   console.log('upload===>', f)
