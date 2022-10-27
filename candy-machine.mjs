@@ -11,7 +11,7 @@ async function upload (f) {
   let content = fs.readFileSync(filePath, 'utf8');
   const added = await client.add(content)
   console.log(added)
-  return `https://ipfs.io/ipfs/${added.path}`
+  return `ipfs://${added.path}`
 }
 
 async function initData () {
