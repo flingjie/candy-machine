@@ -2,20 +2,20 @@ import fs from 'fs'
 import path from 'path'
 import { create } from 'ipfs-http-client';
 
+const baseDir = './data'
 const client = create('http://127.0.0.1:5001')
 
 async function upload (f) {
-  console.log('upload===>', f)
-  let content = fs.readFileSync(f, 'utf8');
+  const filePath = path.join(baseDir, f)
+  console.log('upload===>',)
+  let content = fs.readFileSync(filePath, 'utf8');
   const added = await client.add(content)
   console.log(added)
   return `https://ipfs.io/ipfs/${added.path}`
 }
 
 async function initData () {
-  const baseDir = './data'
   console.log("starting init data ...");
-
   const result = []
   const fileList = await fs.promises.readdir(baseDir)
   const jsonFiles = fileList.filter(f => f.endsWith('.json'))
