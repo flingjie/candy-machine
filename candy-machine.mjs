@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { create } from 'ipfs-http-client';
-import { mint } from './sui'
+import { mint } from './sui.mjs'
 
 const baseDir = './data'
 const client = create('http://127.0.0.1:5001')
