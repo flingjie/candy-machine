@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { create } from 'ipfs-http-client';
+import { mint } from './sui'
 
 const baseDir = './data'
 const client = create('http://127.0.0.1:5001')
@@ -26,10 +27,6 @@ async function initData () {
     result.push(metadata)
   }
   return result
-}
-
-async function mint (item) {
-  console.log("start mint:", JSON.stringify(item, null, 2))
 }
 
 async function main () {

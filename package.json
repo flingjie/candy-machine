@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/flingjie/candy-machine#readme",
   "dependencies": {
+    "@mysten/sui.js": "^0.14.0",
     "ipfs-http-client": "^59.0.0"
   }
 }
