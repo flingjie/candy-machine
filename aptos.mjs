@@ -15,7 +15,7 @@ const collectionName = "Legend's";
   await faucetClient.fundAccount(account.address(), 100_000_000);
   console.log(`Account balance: ${await coinClient.checkBalance(account)}`);
 
-})
+})()
 export async function mint (item) {
   const txnHash = await tokenClient.createToken(
     account,
