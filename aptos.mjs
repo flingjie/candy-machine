@@ -4,6 +4,7 @@ const NODE_URL = process.env.APTOS_NODE_URL || "https://fullnode.devnet.aptoslab
 export const FAUCET_URL = process.env.APTOS_FAUCET_URL || "https://faucet.devnet.aptoslabs.com";
 
 const client = new AptosClient(NODE_URL);
+const coinClient = new CoinClient(client);
 const tokenClient = new TokenClient(client);
 const account = AptosAccount.fromDerivePath("m/44'/637'/2'/0'/0'", "");
 const faucetClient = new FaucetClient(NODE_URL, FAUCET_URL); 
